@@ -1,0 +1,47 @@
+
+markdown
+Copy
+Edit
+# Connecting to Microsoft 365 with PowerShell
+
+This guide walks you through the steps to connect to Microsoft 365 using PowerShell. You'll need to install the necessary modules and authenticate your session to manage Microsoft 365 services.
+
+## Prerequisites
+
+- PowerShell 5.1 or higher
+- Microsoft 365 admin credentials
+- Install required modules
+
+## Step 1: Install the Microsoft 365 PowerShell Module
+
+Before connecting, you need to install the required PowerShell module for Microsoft 365. Open PowerShell as an administrator and run the following command:
+
+```powershell
+Install-Module -Name Microsoft.Online.SharePoint.PowerShell -Force -AllowClobber
+Install-Module -Name MSOnline -Force
+Step 2: Import the Module
+After installation, import the module into your PowerShell session:
+
+powershell
+Copy
+Edit
+Import-Module MSOnline
+Step 3: Connect to Microsoft 365
+Use the following command to connect to your Microsoft 365 tenant:
+
+powershell
+Copy
+Edit
+Connect-MsolService
+You will be prompted to enter your admin credentials.
+
+Step 4: Verify the Connection
+Once connected, verify the connection by running:
+
+powershell
+Copy
+Edit
+Get-MsolCompanyInformation
+If the connection is successful, it will return information about your Microsoft 365 tenant.
+
+This guide helps you quickly set up and start managing your Microsoft 365 environment via PowerShell. For more advanced management tasks, explore additional PowerShell cmdlets and modules.
